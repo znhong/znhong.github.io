@@ -367,40 +367,46 @@ span{
     align-items:center;
     gap:2.5rem;
 }
-.service-box{
+
+.service-box {
     background-color: var(--main-color);
     height: 200px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+
+    display: flex;              /* 讓內容可用 Flex 對齊 */
+    justify-content: flex-start;/* 水平靠左 */
+    align-items: center;        /* 垂直置中 */
+    padding-left: 1rem;         /* 與左邊保持距離 */
 }
-.service-box:hover{
+
+.service-box:hover {
     background: white;
     color: black;
     border: 5px solid var(--main-color);
     transform: scale(1.03);
 }
-.service-box .service-info{
+
+.service-info {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     text-align: left;
-    align-items:baseline;
-    padding: 2rem 2rem;
 }
+
 .service-info h4{
     font-size: 3rem;
     font-weight: 800;
     line-height: 2;
 }
-.service-info p{
+
+.service-info p {
     font-size: 1.6rem;
     font-weight: 600;
-    max-height: 100px;
     line-height: 1.7;
-    margin: auto;
+    margin: 0; /* 去掉預設間距 */ /* margin也可用auto; */
 }
-
 
 .testimonials{
     background: var(--second-gb-color);
